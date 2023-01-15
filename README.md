@@ -7,12 +7,19 @@ Link to repository on GitHub can be found [here](https://github.com/adrian-cucue
 ## How to play
 
 * The overall aim of the project is to create and adventure game, where the player is has to solve several quests in order to find the killer.
-* The user has to find clues around the mansion. It all starts wiht the story introduction about the aim of the game.
-* Every quest has a story and possible answers to questions. The user need to decide what answer to choose.
+* The game starts by asking the user to input a name.
+
+![Game intro](/images/game-intro.png)
+
+* The user has to follow the story and find clues around the mansion.
+* Every quest has a story and possible answers. The user need to decide what answer to choose.
 * If the user is coming to a dead end, the game will automatically bring him back to the last quest.
+
+![Dead end](/images/dead-end.png)
 
 ## Planning
 
+![Flowchart](/images/plan.png)
 
 ## Validator
 
@@ -22,11 +29,15 @@ Link to repository on GitHub can be found [here](https://github.com/adrian-cucue
 
 ![CI Python Linter](/images/CI-linter.png)
 
-## Buges fixed
+## Bugs fixed
 
-* During testing I found the input is case sensitive. I fixed the issue by using .lower() on the users answers.
+* During testing I found the input is case sensitive. I fixed the issue by using .lower() on the users answers. 
+
+![Case Sensitive](/images/case-sensitive.png)
 
 * I created an error message highlighted in red. The user is prompt with an error message about what answer is expected.
+
+![Error Message](/images/error-message.png)
 
 ## Unfixed Bugs
 
@@ -66,4 +77,12 @@ The project was deployed using Heroku. The steps to deploy are as follows:
 
  * Create an option to choose the difficulty level for the game. Have two difficulties for the game (basically having two separate games).
 
- * 
+ ## Credits
+
+ * Code Institute for the template and GUI.
+
+ * [FIGlet](http://www.figlet.org/) for the pyfiglet ASCII art fonts module.
+
+ * [Emoji](https://carpedm20.github.io/emoji/docs/) for the emoji module.
+
+ * [Termcolor](https://pypi.org/project/termcolor/) for the text color module.

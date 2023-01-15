@@ -28,23 +28,77 @@ print("There is also a door to your LEFT.")
 print("You can see a glass-panel door to the RIGHT.")
 
 """
+Guess the Killer
+"""
+
+def guess_the_killer():
+    print("\n")
+    print("Based on the information you have so far, who do you think is the killer?")
+    answer_guess = input("\U0001F914 Amanda, Sara or Mike?:\n")
+    if answer_guess.lower() == "amanda":
+        print("\n")
+        not_the_killer = pyfiglet.figlet_format("NOT HER")
+        print(colored(not_the_killer, 'red'))
+        print("\U0001F61E She is not the killer. She had dinner with your uncle the night before the murder.")
+        print("But don't worry, police will figure it out. You gave them all the clues!")
+    elif answer_guess.lower() == "sara":
+        print("\n")
+        not_the_killer = pyfiglet.figlet_format("NOT HER")
+        print(colored(not_the_killer, 'red'))
+        print("\U0001F61E She is not the killer. She left before your uncles murder on a vacation.")
+        print("But don't worry, police will figure it out. You gave them all the clues!")
+    elif answer_guess.lower() == "mike":
+        print("\n")
+        killer = pyfiglet.figlet_format("GREAT JOB")
+        print(colored(killer, 'green'))
+        print("You found the killer! Mike killed your uncle so he can take the credit for the new discovery!")
+        print("You could make a great detective one day!")
+    else:
+        print(colored('Not a valid answer. You need to choose "Amanda", "Sara" or "Mike"!', 'red'))
+
+"""
+Final quest
+"""
+
+def bathroom():
+    print("\n")
+    print("On the mirror you find the letter M written with toothpaste.")
+    print("You remember your uncle told you he is working with his collegue Mike on the latest research.")
+    answer_bathroom = input("\U0001F914 Do you want to TALK to Mike or INFORM police about it? (TALK or INFORM):\n")
+    if answer_bathroom.lower() == "inform":
+        print("\n")
+        print("Very good! You are a great detective.")
+        guess_the_killer()
+    elif answer_bathroom.lower() == "talk":
+        print("\n")
+        game_over = pyfiglet.figlet_format("GAME OVER")
+        print(colored(game_over, 'red'))
+        print("\U0001F61E Not informing the police was a mistake.")
+        print("Now the police will never catch the killer!")
+    else:
+        print(colored('Not a valid answer. You need to choose "talk" or "inform"!', 'red'))
+        
+
+"""
 Second Bedroom quest
 """
 
 def second_bedroom():
     print("\n")
-    print("You find a letter where the killer is revealed!")
-    answer_letter = input("\U0001F914 Would you give it to the police? (Y or N):\n")
-    if answer_letter.lower() == "y":
+    print("You find an empty sleeping pill bottle!")
+    print("The only person with access to the pills cabinet is the nurse, Sara.")
+    print("But she left 4 days ago on a 7 days trip.")
+    answer_pills = input("\U0001F914 Would you give it to the police? (Y or N):\n")
+    if answer_pills.lower() == "y":
         print("\n")
-        you_win = pyfiglet.figlet_format("YOU WIN")
-        print(colored(you_win, 'green'))
-        print("\U0001F603 Good job! Police is going to arrest the killer")
-    elif answer_letter.lower() == "n":
+        print("Good job! Police will question Sara about the missing pills.")
+        bathroom()
+    elif answer_pills.lower() == "n":
         print("\n")
         game_over = pyfiglet.figlet_format("GAME OVER")
         print(colored(game_over, 'red'))
-        print("\U0001F61E The killer got away with the murder.")
+        print("\U0001F61E Not giving the evidence to police was a mistake.")
+        print("Now the police will never catch the killer!")
     else:
         print(colored('Not a valid answer. You need to choose "Y" or "N"!', 'red'))
         second_bedroom()
@@ -66,6 +120,7 @@ def staircase():
         game_over = pyfiglet.figlet_format("GAME OVER")
         print(colored(game_over, 'red'))
         print("\U0001F61E You missed an important clue in the second bedroom.")
+        print("Now the police will never catch the killer!")
     else:
         print(colored('Not a valid answer. You need to choose "Y" or "N"!', 'red'))
         staircase()
@@ -77,11 +132,11 @@ Closet Hall quest
 def closet_hall():
     print("\n")
     print("You open the closet and you find a woman hat.")
-    print("You realize the hat belongs to a collegue of your uncle.")
-    answer_hat = input("\U0001F914 Would you INFORM the police about it or CONFRUNT the lady yourself?:\n")
+    print("You realize the hat belongs to Amanda, a collegue of your uncle. They had dinner 3 days ago.")
+    answer_hat = input("\U0001F914 Would you INFORM the police about it or CONFRUNT Amanda yourself?:\n")
     if answer_hat.lower() == "inform":
         print("\n")
-        print("\U0001F603 Good job! Police is gonna question the lady about her hat.")
+        print("\U0001F603 Good job! Police is gonna question the Amanda about her hat.")
         staircase()
     elif answer_hat.lower() == "confrunt":
         print("\n")

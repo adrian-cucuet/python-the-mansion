@@ -4,23 +4,29 @@ Live link to the application can be found here: [The Mansion](https://project-3-
 
 Link to repository on GitHub can be found [here](https://github.com/adrian-cucuet/project3-python-game)
 
-## Design
+## How to play
 
 * The overall aim of the project is to create and adventure game, where the player is has to solve several quests in order to find the killer.
-* The story 
+* The user has to find clues around the mansion. It all starts wiht the story introduction about the aim of the game.
+* Every quest has a story and possible answers to questions. The user need to decide what answer to choose.
+* If the user is coming to a dead end, the game will automatically bring him back to the last quest.
 
-# Testing
+## Planning
 
-## Buges fixed
 
-* During testing I found the input is case sensitive. I fixed the issue by using .lower() on the users answers.
-* I created an error message highlighted in red. The user is prompt with an error message about what answer is expected.
+## Validator
 
-## Validator Testing
+* No errors identified from syntax check online [infoheap](https://infoheap.com/python-lint-online/)
 
 * Project code passed through the CI Python Linter with no issues. The only issues were related to longer code, but that has to do with the emoji codes.
 
 ![CI Python Linter](/images/CI-linter.png)
+
+## Buges fixed
+
+* During testing I found the input is case sensitive. I fixed the issue by using .lower() on the users answers.
+
+* I created an error message highlighted in red. The user is prompt with an error message about what answer is expected.
 
 ## Unfixed Bugs
 
@@ -42,7 +48,6 @@ The project was deployed using Heroku. The steps to deploy are as follows:
   9. Your app should now be available to see. You can choose whether to have your app 
      automatically redeploy with every push or to keep it manual.
 
-
 ## Languages used 
 
  * Python
@@ -56,3 +61,9 @@ The project was deployed using Heroku. The steps to deploy are as follows:
  * Heroku
 
  * Code Institute template
+
+ ## Future Expansion
+
+ * Create an option to choose the difficulty level for the game. Have two difficulties for the game (basically having two separate games).
+
+ * 

@@ -27,6 +27,75 @@ print("You can go FORWARD to the other side of the entrance hall.")
 print("There is also a door to your LEFT.")
 print("You can see a glass-panel door to the RIGHT.")
 
+"""
+Second Bedroom quest
+"""
+
+def second_bedroom():
+    print("\n")
+    print("You find a letter where the killer is revealed!")
+    answer_letter = input("\U0001F914 Would you give it to the police? (Y or N):\n")
+    if answer_letter == "y":
+        print("\n")
+        you_win = pyfiglet.figlet_format("YOU WIN")
+        print(colored(you_win, 'green'))
+        print("\U0001F603 Good job! Police is going to arrest the killer")
+    elif answer_letter == "n":
+        print("\n")
+        game_over = pyfiglet.figlet_format("GAME OVER")
+        print(colored(game_over, 'red'))
+        print("\U0001F61E The killer got away with the murder.")
+    else:
+        print(colored('Not a valid answer. You need to choose "y" or "n"!', 'red'))
+        second_bedroom()
+
+"""
+Staircase quest
+"""
+
+def staircase():
+    print("\n")
+    print("You go up the stairs. You decide to check your uncles bedroom.")
+    print("You find the bed made. \U0001F914 Looks like he didn't get to his bedroom the day he died.")
+    answer_second_bedroom = input("\U0001F914 Would you like to check the second bedroom? (Y or N):\n")
+    if answer_second_bedroom == "y":
+        print("\n")
+        second_bedroom()
+    elif answer_second_bedroom == "n":
+        print("\n")
+        game_over = pyfiglet.figlet_format("GAME OVER")
+        print(colored(game_over, 'red'))
+        print("\U0001F61E You missed an important clue in the second bedroom.")
+    else:
+        print(colored('Not a valid answer. You need to choose "y" or "n"!', 'red'))
+        staircase()
+
+"""
+Closet Hall quest
+"""
+
+def closet_hall():
+    print("\n")
+    print("You open the closet and you find a woman hat.")
+    print("You realize the hat belongs to a collegue of your uncle.")
+    answer_hat = input("\U0001F914 Would you INFORM the police about it or CONFRUNT the lady yourself?:\n")
+    if answer_hat == "inform":
+        print("\n")
+        print("\U0001F603 Good job! Police is gonna question the lady about her hat.")
+        staircase()
+    elif answer_hat == "confrunt":
+        print("\n")
+        print("Because it's too late at night, you have to wait untill tomorrow.")
+        print("\U0001F61E Now it's too late to use the hat as evidence.")
+        staircase()
+    else:
+        print(colored('Not a valid answer. You need to choose "inform" or "confrunt"!', 'red'))
+        closet_hall()
+
+"""
+Forward quest
+"""
+
 def forward():
     print("\n")
     print("You reached the end of the entrance hall.")
@@ -41,7 +110,7 @@ def forward():
         forward()
 
 """
-First quest
+Intro quest
 """
 
 def intro():

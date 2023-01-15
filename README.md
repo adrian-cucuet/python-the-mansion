@@ -1,31 +1,58 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Mansion - Python adventure game.
 
-Welcome adrian-cucuet,
+Live link to the application can be found here: [The Mansion](https://project-3-python-game.herokuapp.com/)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Link to repository on GitHub can be found [here](https://github.com/adrian-cucuet/project3-python-game)
 
-## Reminders
+## Design
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+* The overall aim of the project is to create and adventure game, where the player is has to solve several quests in order to find the killer.
+* The story 
 
-## Creating the Heroku app
+# Testing
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Buges fixed
 
-1. `heroku/python`
-2. `heroku/nodejs`
+* During testing I found the input is case sensitive. I fixed the issue by using .lower() on the users answers.
+* I created an error message highlighted in red. The user is prompt with an error message about what answer is expected.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Validator Testing
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+* Project code passed through the CI Python Linter with no issues. The only issues were related to longer code, but that has to do with the emoji codes.
 
-Connect your GitHub repository and deploy as normal.
+![CI Python Linter](/images/CI-linter.png)
 
-## Constraints
+## Unfixed Bugs
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+* No unfixed Bugs.
 
------
-Happy coding!
+## Deployment
+
+The project was deployed using Heroku. The steps to deploy are as follows:
+
+  1. Go to Heroku
+  2. Go to 'New' and select 'Create a new app'
+  3. Input your app name and create app.
+  4. Navigate to 'Settings'
+  5. Install the needed buildpacks. Select Python and install and then node.js and 
+     install and then click save. They must be in this order.
+  6. Navigate to the 'Deploy' section.
+  7. Connect to GitHub, search for your repo and confirm.
+  8. Choose branch to deploy.
+  9. Your app should now be available to see. You can choose whether to have your app 
+     automatically redeploy with every push or to keep it manual.
+
+
+## Languages used 
+
+ * Python
+
+## Technologies used
+
+ * Github 
+
+ * Gitpod
+
+ * Heroku
+
+ * Code Institute template

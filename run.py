@@ -133,18 +133,18 @@ def closet_hall():
     print("\n")
     print("You open the closet and you find a woman hat.")
     print("You realize the hat belongs to Amanda, a collegue of your uncle. They had dinner 3 days ago.")
-    answer_hat = input("\U0001F914 Would you INFORM the police about it or CONFRUNT Amanda yourself?:\n")
+    answer_hat = input("\U0001F914 Would you INFORM the police about it or CONFRONT Amanda yourself?:\n")
     if answer_hat.lower() == "inform":
         print("\n")
         print("\U0001F603 Good job! Police is gonna question the Amanda about her hat.")
         staircase()
-    elif answer_hat.lower() == "confrunt":
+    elif answer_hat.lower() == "confront":
         print("\n")
         print("Because it's too late at night, you have to wait untill tomorrow.")
         print("\U0001F61E Now it's too late to use the hat as evidence.")
         staircase()
     else:
-        print(colored('Not a valid answer. You need to choose "inform" or "confrunt"!', 'red'))
+        print(colored('Not a valid answer. You need to choose "inform" or "confront"!', 'red'))
         closet_hall()
 
 """
